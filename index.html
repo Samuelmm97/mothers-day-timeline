@@ -3,12 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Mother's Day — For You, Mom</title>
+  <title>Happy Mother's Day, Nicole</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <style>
-    /* ========================================
-       CSS CUSTOM PROPERTIES — Edit these to customize!
-       ======================================== */
     :root {
       --bg-cream: #faf6f1;
       --bg-gradient-start: #fdf2f6;
@@ -29,9 +26,6 @@
       --font-body: 'Lora', 'Palatino', serif;
     }
 
-    /* ========================================
-       RESET & BASE
-       ======================================== */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -52,9 +46,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ========================================
-       HERO SECTION
-       ======================================== */
+    /* Hero Section */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -110,24 +102,11 @@
     .petal:nth-child(10) { left: 35%; animation-duration: 9s; animation-delay: 6s; background: var(--accent-gold-light); width: 10px; height: 10px; }
 
     @keyframes petalFall {
-      0% {
-        transform: translateY(-10vh) rotate(0deg) translateX(0);
-        opacity: 0;
-      }
-      10% {
-        opacity: 0.7;
-      }
-      50% {
-        transform: translateY(50vh) rotate(180deg) translateX(30px);
-        opacity: 0.5;
-      }
-      90% {
-        opacity: 0.2;
-      }
-      100% {
-        transform: translateY(110vh) rotate(360deg) translateX(-20px);
-        opacity: 0;
-      }
+      0% { transform: translateY(-10vh) rotate(0deg) translateX(0); opacity: 0; }
+      10% { opacity: 0.7; }
+      50% { transform: translateY(50vh) rotate(180deg) translateX(30px); opacity: 0.5; }
+      90% { opacity: 0.2; }
+      100% { transform: translateY(110vh) rotate(360deg) translateX(-20px); opacity: 0; }
     }
 
     .hero-content {
@@ -194,18 +173,14 @@
       animation: scrollHintBounce 2s ease-in-out infinite;
     }
 
-    .scroll-hint-arrow {
-      font-size: 1.5rem;
-    }
+    .scroll-hint-arrow { font-size: 1.5rem; }
 
     @keyframes scrollHintBounce {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(6px); }
     }
 
-    /* ========================================
-       INTRO MESSAGE
-       ======================================== */
+    /* Intro Message */
     .intro {
       text-align: center;
       padding: 5rem 2rem;
@@ -228,18 +203,14 @@
       line-height: 1.9;
     }
 
-    .intro p + p {
-      margin-top: 1.5rem;
-    }
+    .intro p + p { margin-top: 1.5rem; }
 
     .highlight {
       color: var(--accent-rose);
       font-weight: 600;
     }
 
-    /* ========================================
-       TIMELINE SECTION
-       ======================================== */
+    /* Timeline Section */
     .timeline-section {
       padding: 2rem 1.5rem 6rem;
       max-width: 1000px;
@@ -269,7 +240,6 @@
       padding: 2rem 0;
     }
 
-    /* Central vertical line */
     .timeline::before {
       content: '';
       position: absolute;
@@ -295,19 +265,9 @@
       transform: translateY(0);
     }
 
-    .timeline-event.left {
-      left: 0;
-      padding-right: 4rem;
-      text-align: right;
-    }
+    .timeline-event.left { left: 0; padding-right: 4rem; text-align: right; }
+    .timeline-event.right { left: 50%; padding-left: 4rem; text-align: left; }
 
-    .timeline-event.right {
-      left: 50%;
-      padding-left: 4rem;
-      text-align: left;
-    }
-
-    /* Timeline dot */
     .timeline-dot {
       position: absolute;
       top: 0.5rem;
@@ -321,20 +281,14 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .timeline-event.left .timeline-dot {
-      right: -8px;
-    }
-
-    .timeline-event.right .timeline-dot {
-      left: -8px;
-    }
+    .timeline-event.left .timeline-dot { right: -8px; }
+    .timeline-event.right .timeline-dot { left: -8px; }
 
     .timeline-event:hover .timeline-dot {
       transform: scale(1.4);
       box-shadow: 0 0 0 6px var(--accent-rose-pale), 0 0 20px rgba(212, 114, 140, 0.3);
     }
 
-    /* Timeline card */
     .timeline-card {
       background: var(--card-white);
       border-radius: var(--border-radius);
@@ -348,15 +302,6 @@
       transform: translateY(-2px);
     }
 
-    .card-photo {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-      /* Gradient placeholder — replace with real photo */
-      background: linear-gradient(135deg, var(--accent-rose-pale) 0%, var(--accent-gold-light) 100%);
-    }
-
     .card-photo-placeholder {
       width: 100%;
       height: 220px;
@@ -364,7 +309,6 @@
       align-items: center;
       justify-content: center;
       font-size: 3rem;
-      /* Gradient placeholder */
       background: linear-gradient(135deg, var(--accent-rose-pale) 0%, var(--accent-gold-light) 100%);
     }
 
@@ -380,10 +324,6 @@
       text-transform: uppercase;
       letter-spacing: 0.1em;
       margin-bottom: 0.5rem;
-    }
-
-    .timeline-event.right .card-date {
-      text-align: left;
     }
 
     .card-title {
@@ -402,17 +342,7 @@
       line-height: 1.8;
     }
 
-    .timeline-event.right .card-title {
-      text-align: left;
-    }
-
-    .timeline-event.right .card-description {
-      text-align: left;
-    }
-
-    /* ========================================
-       LOVE LETTER SECTION
-       ======================================== */
+    /* Love Letter Section */
     .love-letter {
       max-width: 700px;
       margin: 0 auto;
@@ -451,9 +381,7 @@
       z-index: 1;
     }
 
-    .love-letter-text p + p {
-      margin-top: 1.5rem;
-    }
+    .love-letter-text p + p { margin-top: 1.5rem; }
 
     .love-letter-signature {
       margin-top: 2rem;
@@ -465,9 +393,7 @@
       z-index: 1;
     }
 
-    /* ========================================
-       FOOTER
-       ======================================== */
+    /* Footer */
     .footer {
       text-align: center;
       padding: 3rem 2rem 4rem;
@@ -481,77 +407,37 @@
       margin-bottom: 0.75rem;
     }
 
-    /* ========================================
-       RESPONSIVE
-       ======================================== */
+    /* Responsive */
     @media (max-width: 768px) {
-      .timeline::before {
-        left: 20px;
-      }
-
+      .timeline::before { left: 20px; }
       .timeline-event {
         width: 100%;
         left: 0 !important;
         padding: 0 2rem 3rem 3.5rem;
         text-align: left !important;
       }
-
-      .timeline-event .timeline-dot {
-        left: 12px !important;
-        right: auto !important;
-      }
-
-      .card-body {
-        padding: 1.25rem 1.5rem 1.75rem;
-      }
-
-      .card-photo-placeholder,
-      .card-photo {
-        height: 180px;
-      }
-
-      .love-letter-card {
-        padding: 2.5rem 2rem;
-      }
-
-      .intro {
-        padding: 3rem 1.5rem;
-      }
-
-      .timeline-section {
-        padding: 1rem 1rem 4rem;
-      }
+      .timeline-event .timeline-dot { left: 12px !important; right: auto !important; }
+      .card-body { padding: 1.25rem 1.5rem 1.75rem; }
+      .card-photo-placeholder { height: 180px; }
+      .love-letter-card { padding: 2.5rem 2rem; }
+      .intro { padding: 3rem 1.5rem; }
+      .timeline-section { padding: 1rem 1rem 4rem; }
     }
 
     @media (max-width: 480px) {
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-
-      .hero-subtitle {
-        font-size: 1rem;
-      }
-
-      .card-title {
-        font-size: 1.2rem;
-      }
+      .hero h1 { font-size: 2.2rem; }
+      .hero-subtitle { font-size: 1rem; }
+      .card-title { font-size: 1.2rem; }
     }
 
-    /* ========================================
-       UTILITY ANIMATIONS
-       ======================================== */
+    /* Fade-in utility */
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
       transition: opacity 0.7s ease-out, transform 0.7s ease-out;
     }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Print-friendly styles */
     @media print {
       .hero { min-height: auto; padding: 3rem 2rem; }
       .petal { display: none; }
@@ -566,7 +452,6 @@
        HERO SECTION
        ======================================== -->
   <section class="hero">
-    <!-- Floating petals -->
     <div class="petal"></div>
     <div class="petal"></div>
     <div class="petal"></div>
@@ -582,8 +467,7 @@
       <span class="hero-icon">🌷</span>
       <h1>
         Happy Mother's Day
-        <!-- REPLACE: Change her name here -->
-        <span class="her-name">[Her Name]</span>
+        <span class="her-name">Nicole</span>
       </h1>
       <p class="hero-subtitle">
         A little story of all the beautiful moments we've shared with you
@@ -600,9 +484,8 @@
        ======================================== -->
   <section class="intro fade-in">
     <div class="intro-ornament">✦ ✦ ✦</div>
-    <!-- REPLACE: Edit this message to be personal -->
     <p>
-      Dear Mom, there's no box big enough, no card long enough,
+      Dear Nicole, there's no box big enough, no card long enough,
       to hold everything we want to say to you. So instead, we made
       this — a little journey through the moments that remind us
       of how lucky we are to call you <span class="highlight">our mom</span>.
@@ -622,81 +505,85 @@
 
     <div class="timeline">
 
-      <!-- Event 1 — LEFT -->
+      <!-- Event 1 — LEFT: Maya -->
       <div class="timeline-event left">
         <div class="timeline-dot"></div>
         <div class="timeline-card">
-          <!-- REPLACE: Replace this div with an <img src="your-photo.jpg" class="card-photo" alt="..."> -->
           <div class="card-photo-placeholder">👶</div>
           <div class="card-body">
-            <!-- REPLACE: Edit the date, title, and description -->
-            <div class="card-date">The Beginning</div>
-            <h3 class="card-title">The Day You Became a Mom</h3>
+            <div class="card-date">December 11, 2023</div>
+            <h3 class="card-title">Maya Came Into Our World</h3>
             <p class="card-description">
-              The world changed in the most beautiful way. You held your first child
-              for the first time, and something inside you shifted — you became a mother,
-              and everything else became background noise. That warmth you felt in that
-              moment? It's the same warmth you give every single day.
+              The day you held your first baby for the first time, something
+              shifted inside you — and everything else became background noise.
+              Maya came into this world on December 11, 2023, and you became
+              the most beautiful mom we could have ever imagined. That warmth
+              you felt in that first moment? It's the same warmth you give every
+              single day.
             </p>
           </div>
         </div>
       </div>
 
-      <!-- Event 2 — RIGHT -->
+      <!-- Event 2 — RIGHT: Family -->
       <div class="timeline-event right">
         <div class="timeline-dot"></div>
         <div class="timeline-card">
           <div class="card-photo-placeholder">📸</div>
           <div class="card-body">
             <div class="card-date">Early Days</div>
-            <h3 class="card-title">Our First Family Photo</h3>
+            <h3 class="card-title">Our First Family as Four</h3>
             <p class="card-description">
-              The photo didn't turn out perfect — nobody smiled right, someone was crying,
-              and the lighting was all wrong. But looking at it now, that's the moment
-              everything started. That's the day our family truly began. You were the
-              glue holding it all together even then.
+              The photo didn't turn out perfect — nobody smiled right, someone
+              was crying, and the lighting was all wrong. But looking at it
+              now, that's the moment everything started. That's the day our
+              family truly began. You were the glue holding it all together,
+              even on the sleepless nights.
             </p>
           </div>
         </div>
       </div>
 
-      <!-- Event 3 — LEFT -->
+      <!-- Event 3 — LEFT: Adam -->
       <div class="timeline-event left">
         <div class="timeline-dot"></div>
         <div class="timeline-card">
           <div class="card-photo-placeholder">🎉</div>
           <div class="card-body">
-            <div class="card-date">A New Addition</div>
-            <h3 class="card-title">[Child's Name] Joins Our World</h3>
+            <div class="card-date">December 13, 2024</div>
+            <h3 class="card-title">Adam Joins the Party</h3>
             <p class="card-description">
-              <!-- REPLACE: Personalize this for each child -->
-              The day you held your next little one, it was love all over again — but
-              bigger, deeper, wider. You somehow found a whole new room in your heart
-              and filled it with another reason to wake up every morning with love.
+              Just under a year later, Adam arrived — December 13, 2024 —
+              and love came all over again, bigger and deeper than before.
+              Maya got her first big brother, and somehow you found a whole
+              new room in your heart. You went from a mom of one to a mom
+              of two, and handled it all with the same grace you bring to
+              everything.
             </p>
           </div>
         </div>
       </div>
 
-      <!-- Event 4 — RIGHT -->
+      <!-- Event 4 — RIGHT: Everyday magic -->
       <div class="timeline-event right">
         <div class="timeline-dot"></div>
         <div class="timeline-card">
-          <div class="card-photo-placeholder">🌅</div>
+          <div class="card-photo-placeholder">✨</div>
           <div class="card-body">
-            <div class="card-date">Adventures</div>
-            <h3 class="card-title">Our First Family Vacation</h3>
+            <div class="card-date">Every Day</div>
+            <h3 class="card-title">Maya's First Smile, Adam's First Gasp</h3>
             <p class="card-description">
-              The chaos of packing, the road trip with kids in the back seat singing
-              at the top of their lungs, the moments when everything went wrong and
-              somehow it was the best day ever. You made magic out of ordinary moments
-              and turned a simple trip into a story we'd tell forever.
+              The moments we'll carry forever — Maya's first giggle that made
+              your whole face light up. Adam's first time looking right into
+              your eyes like you were the most important person in the
+              universe. Because you are. You are both their whole world,
+              and they are yours.
             </p>
           </div>
         </div>
       </div>
 
-      <!-- Event 5 — LEFT -->
+      <!-- Event 5 — LEFT: Building a home -->
       <div class="timeline-event left">
         <div class="timeline-dot"></div>
         <div class="timeline-card">
@@ -705,46 +592,49 @@
             <div class="card-date">Building Together</div>
             <h3 class="card-title">Making Our House a Home</h3>
             <p class="card-description">
-              A house is just walls and wood, but you — with your late-night cooking,
-              your Sunday morning pancakes, your ability to make anywhere feel like home —
-              you turned four walls into a sanctuary. This is what home feels like,
-              and it's because of you.
+              A house is just walls and wood, but you — with your late-night
+              feedings, your Sunday morning routines, your ability to make
+              anywhere feel safe and warm — you turned our house into a home.
+              Two kids, a household running on love and caffeine, and you
+              somehow make it all feel effortless.
             </p>
           </div>
         </div>
       </div>
 
-      <!-- Event 6 — RIGHT -->
+      <!-- Event 6 — RIGHT: The ordinary magic -->
       <div class="timeline-event right">
         <div class="timeline-dot"></div>
         <div class="timeline-card">
           <div class="card-photo-placeholder">💛</div>
           <div class="card-body">
-            <div class="card-date">Every Day</div>
+            <div class="card-date">Always</div>
             <h3 class="card-title">The Magic in the Ordinary</h3>
             <p class="card-description">
-              It's not always the big moments we remember. It's the bedtime stories,
-              the packed lunches with little notes inside, the way you always know
-              when something's wrong before we say a word. The quiet, everyday love
-              that makes our lives so rich and full.
+              It's not always the big moments we remember. It's the bedtime
+              songs, the lunches packed with love, the way you always know
+              when Maya needs a cuddle or Adam needs to feel held. The quiet,
+              everyday love that makes our lives so rich. You don't even
+              realize how magical you are.
             </p>
           </div>
         </div>
       </div>
 
-      <!-- Event 7 — LEFT -->
+      <!-- Event 7 — LEFT: How she makes everything better -->
       <div class="timeline-event left">
         <div class="timeline-dot"></div>
         <div class="timeline-card">
-          <div class="card-photo-placeholder">✨</div>
+          <div class="card-photo-placeholder">💗</div>
           <div class="card-body">
-            <div class="card-date">Always</div>
+            <div class="card-date">Today</div>
             <h3 class="card-title">How You Make Everything Better</h3>
             <p class="card-description">
-              Bad day? You make it better with a hug. Tough time? You somehow find
-              the right words. We don't know how you do it — the patience, the
-              kindness, the way you pour into everyone around you while quietly
-              pouring nothing into yourself. You are the heart of this family.
+              Bad day? You make it better with a hug. Tough time? You somehow
+              find the right words. We don't know how you do it — the patience
+              with two kids, the kindness that never runs out, the way you pour
+              into everyone around you while quietly forgetting yourself.
+              You are the heart of this family, Nicole.
             </p>
           </div>
         </div>
@@ -758,19 +648,21 @@
        ======================================== -->
   <section class="love-letter">
     <div class="love-letter-card fade-in">
-      <!-- REPLACE: Write your own heartfelt message here -->
       <p class="love-letter-text">
-        Mom, you are the most beautiful thing in our lives. Not because of anything
-        you look like — but because of who you are. Your love is the first language
-        we learned, the safest place we know, and the reason we believe in magic.
+        Nicole, you are the most beautiful thing in our lives. Not because of
+        anything you look like — but because of who you are. Your love is the
+        first language Maya and Adam will ever know, the safest place we'll
+        ever find, and the reason we believe in magic.
         <br><br>
-        Thank you for every sacrifice, every smile, every moment of love that went
-        unnoticed. Today we see you. Today we celebrate you. Today and always.
+        Thank you for every sacrifice, every sleepless night turned into a
+        morning smile, every moment of love that went unnoticed. Today we see
+        you. Today we celebrate you. Today and always.
+        <br><br>
+        Happy Mother's Day, Mommy. We love you to the moon and back.
       </p>
       <div class="love-letter-signature">
-        <!-- REPLACE: Add your family names -->
         With all our love,<br>
-        [Your Names] 💕
+        Your Family 💕
       </div>
     </div>
   </section>
@@ -787,7 +679,6 @@
        JAVASCRIPT — Scroll Animations
        ======================================== -->
   <script>
-    // Intersection Observer for scroll-triggered animations
     document.addEventListener('DOMContentLoaded', function() {
       const observerOptions = {
         root: null,
@@ -799,18 +690,14 @@
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            observer.unobserve(entry.target); // Only animate once
+            observer.unobserve(entry.target);
           }
         });
       }, observerOptions);
 
-      // Observe all fade-in and timeline events
       var elements = document.querySelectorAll('.fade-in, .timeline-event');
-      elements.forEach(function(el) {
-        observer.observe(el);
-      });
+      elements.forEach(function(el) { observer.observe(el); });
 
-      // Optional: gentle parallax on hero
       var heroContent = document.querySelector('.hero-content');
       var ticking = false;
 
